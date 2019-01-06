@@ -1,0 +1,55 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:10-stretch
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - node-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          - node-{{ .Branch }}-
+
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: node-{{ .Branch }}-{{ checksum "package-lock.json" }}
+
+      - run: npm run lint
+      # todo: - run: npm run test
+      - run: npm run build
+
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - repo
+
+  publish:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:10-stretch
+    steps:
+      - run:
+          name: publisih
+          command: |
+            cd dist && git init
+            git remote add production git@github.com:efredin/efredin.github.io.git
+            git add .
+            git commit -m "$CIRCLE_BRANCH build#CIRCLE_BUILD_NUM" --allow-empty
+            git push --force production master
+
+workflows:
+  version: 2
+  testfirelabs-vnext-latest:
+    jobs:
+      - build
+      - publish:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
