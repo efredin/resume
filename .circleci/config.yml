@@ -56,7 +56,7 @@ jobs:
             git config --global user.name "CircleCI"
             git remote add production git@github.com:efredin/efredin.github.io.git
             git add .
-            git commit -m "$CIRCLE_BRANCH build#CIRCLE_BUILD_NUM" --allow-empty
+            git commit -m "$CIRCLE_BRANCH build#${CIRCLE_BUILD_NUM}" --allow-empty
             git push --force production master
 
 workflows:
