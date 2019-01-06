@@ -25,6 +25,7 @@ const Home = (props) => (
                 </p>
             </Grid.Column>
             <Grid.Column floated="right" width={6}>
+              Testing CI/CD build
             </Grid.Column>
             </Grid.Row>
             <Grid.Row>
