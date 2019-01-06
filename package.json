@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "clean": "rimraf ./dist",
-    "lint": "tslint",
+    "lint": "tslint --project ./tslint.json",
     "start": "webpack-dev-server --mode development --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
