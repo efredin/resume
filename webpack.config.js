@@ -1,0 +1,68 @@
+const path = require('path');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
+const paths = {
+    src: path.resolve('./src')
+};
+
+module.exports = {
+  name: 'fredin.io',
+  entry: './src/index.tsx',
+  resolve: {
+    extensions: [
+      '.ts',
+      '.tsx',
+      '.js',
+      '.json',
+      '.jsx',
+    ]
+  },
+  module: {
+    strictExportPresence: true,
+    rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        use: 'tslint-loader',
+        enforce: 'pre',
+        include: paths.src
+      },
+      {
+        test: /\.js$/,
+        use: 'source-map-loader',
+        enforce: 'pre',
+        include: paths.src,
+      },
+      {
+        oneOf: [
+          {
+            test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.svg$/],
+            use: 'file-loader'
+          },
+          {
+            test: /\.(ts|tsx)$/,
+            use: 'ts-loader',
+            include: paths.src,
+          },
+          {
+            test: /\.(less)$/,
+            use: 'less-loader'
+          },
+          {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader'],
+          },
+          {
+            exclude: [/\.js$/, /\.html$/, /\.json$/],
+            use: 'file-loader',
+          },
+        ],
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: './src/index.html',
+      filename: './index.html'
+    })
+  ]
+};
