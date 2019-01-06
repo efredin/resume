@@ -44,8 +44,9 @@ module.exports = {
             include: paths.src,
           },
           {
-            test: /\.(less)$/,
-            use: 'less-loader'
+            test: /\.(css|less)$/,
+            use: ['style-loader', 'css-loader', 'less-loader'],
+            include: paths.src
           },
           {
             test: /\.css$/,
