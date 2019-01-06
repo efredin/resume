@@ -35,10 +35,25 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
+
+      # add publish ssh key
+      - add-ssh-keys:
+          fingerprints:
+            - "f9:76:ad:2d:14:6d:d1:f2:f1:ba:97:c8:9a:38:a2:a8"
+      - run:
+          name: keyscan
+          command: |
+            if [ ! -d ~/.ssh ]; then
+              mkdir ~/.ssh
+            fi
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       - run:
           name: publisih
           command: |
             cd dist && git init
+            git config --global user.email "efredin+circleci@gmail.com"
+            git config --global user.name "CircleCI"
             git remote add production git@github.com:efredin/efredin.github.io.git
             git add .
             git commit -m "$CIRCLE_BRANCH build#CIRCLE_BUILD_NUM" --allow-empty
