@@ -1,7 +1,76 @@
-.timeline {
+@border-color: #d4d4d5;
+
+.ui.timeline {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    width: 3px;
+    height: 100%;
+    content: '';
+    background-color: @border-color;
+  }
+
+  .point {
+    position: absolute;
+    left: calc(50% - 8px);
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin-top: 1rem;
+    padding: 6px;
+    line-height: 1em;
+    text-align: center;
+    border-radius: 100%;
+    background-color: @border-color;
+    border: 3px solid #fff;
+  }
+
   .card {
-    .label.pointing.left {
-      margin-left: 0;
+    position: relative;
+    width: 48%;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 1.5rem;
+      margin-top: 2px;
+      width: 10px;
+      height: 10px;
+      background-color: #d4d4d5;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      z-index: -1;
+    }
+
+    &.left {
+      left: 0;
+
+      &:before {
+        right: -10px;
+      }
+    }
+    &.right {
+      right: 0;
+      margin-left: auto;
+      margin-right: 0;
+
+      &:before {
+        left: 0;
+      }
+    }
+
+    .feed > .event {
+      > .label {
+        width: 5em;
+      }
+      > .content {
+        .summary {
+          margin-top: 0.5em;
+        }
+      }
     }
   }
 }

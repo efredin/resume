@@ -1,39 +1,30 @@
 import React from 'react';
 import {
-  Button,
   Container,
   Header,
-  Icon
+  Icon,
+  Image
 } from 'semantic-ui-react';
+import headshot from './images/headshot.jpg';
+import './Masthead.less';
 
 const Masthead = () => {
   return (
-    <Container text>
+    <Container text className="masthead">
+      <Image circular centered size="medium" src={headshot} />
       <Header
         as="h1"
-        content="Imagine-a-Company"
+        content="Eric J. Fredin"
         inverted
-        style={{
-          fontSize: '2em',
-          fontWeight: 'normal',
-          marginBottom: 0,
-          marginTop: '1.5em',
-        }}
       />
       <Header
         as="h2"
-        content="Do whatever you want when you want to."
+        content="Software Developer"
         inverted
-        style={{
-          fontSize: '1.5em',
-          fontWeight: 'normal',
-          marginTop: '0.5em',
-        }}
       />
-      <Button primary size="huge">
-        Get Started
-        <Icon name="arrow right" />
-      </Button>
+      <a className="down" href="#timeline">
+        <Icon size="huge" name="chevron down" />
+      </a>
     </Container>
   );
 };

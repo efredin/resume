@@ -3,8 +3,11 @@ export interface Timeline {
 }
 
 export interface TimelineItem {
-  date: Date;
+  date: string;
   type: 'role' | 'achievement';
   title: string;
   description: string;
+  company?: string;
+  image?: string;
+  icon?: string;
 }

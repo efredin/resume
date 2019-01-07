@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Label } from 'semantic-ui-react';
+import moment from 'moment';
+import { Card, Feed } from 'semantic-ui-react';
 import * as schema from './Schema';
 
 export interface TimelineItemProps {
@@ -7,15 +8,36 @@ export interface TimelineItemProps {
 }
 
 const TimelineItem = (props: TimelineItemProps) => {
-  const pointing = props.item.type === 'role' ? 'right' : 'left';
+  const { item } = props;
+  const position = item.type === 'role' ? 'left' : 'right';
+  const image = item.image && require(`../images/${item.image}`);
   return (
-    <Card fluid>
-      <Card.Content>
-        <Label attached="top" pointing={pointing}>Time</Label>
-        <Card.Header>Title</Card.Header>
-        <Card.Description>Description</Card.Description>
-      </Card.Content>
-    </Card>
+    <>
+      <div className="point"></div>
+      <Card className={position}>
+        <Card.Content>
+          <Feed>
+            <Feed.Event>
+              {image && <Feed.Label>
+                <img src={image} />
+              </Feed.Label>}
+              <Feed.Content>
+                <Feed.Date>
+                  {moment(item.date).format('MMM YYYY')}
+                </Feed.Date>
+                <Feed.Event>
+                  {item.title}
+                  {item.company && <span>
+                    &nbsp;@ {item.company }
+                  </span>}
+                </Feed.Event>
+                <Feed.Summary>{item.description}</Feed.Summary>
+              </Feed.Content>
+            </Feed.Event>
+          </Feed>
+        </Card.Content>
+      </Card>
+    </>
   );
 };
 

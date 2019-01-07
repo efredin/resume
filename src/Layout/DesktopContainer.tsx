@@ -33,9 +33,9 @@ export default class DesktopContainer extends Component<DesktopContainerProps> {
           onBottomPassedReverse={this.hideFixedMenu}
         >
           <Segment
+            className="primary"
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
           >
             <Menu
