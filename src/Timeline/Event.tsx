@@ -4,7 +4,7 @@ import Achievement from './Achievement';
 import Role from './Role';
 import Education from './Education';
 import Project from './Project';
-import { Card } from 'semantic-ui-react';
+import { Card, Icon } from 'semantic-ui-react';
 import * as schema from './Schema';
 
 export interface TimelineEventProps {
@@ -14,23 +14,36 @@ export interface TimelineEventProps {
 
 const Event = (props: TimelineEventProps) => {
   const { event, position } = props;
+
+  let point;
+  switch (event.type) {
+    case 'role':
+    default:
+      point = 'briefcase';
+      break;
+    case 'education':
+      point = 'graduation';
+      break;
+    case 'project':
+      point = 'code';
+      break;
+  }
+
   return (
-    <div className={`event ${position}`}>
-      <div className="point"></div>
-      <Card fluid>
-        <Card.Content>
-          <Card.Header>
-            {moment(event.date).format('MMM YYYY')}
-          </Card.Header>
-        </Card.Content>
-        {event.type === 'role' && <Role role={event as schema.TimelineRoleItem} />}
-        {event.type === 'education' && <Education education={event as schema.TimelineEducationItem} />}
-        {event.type === 'project' && <Project project={event as schema.TimelineProjectItem } />}
-        {event.achievements && event.achievements.map((item, i) => (
-          <Achievement achievement={item} key={i} />
-        ))}
-      </Card>
-    </div>
+    <Card fluid className={`event ${position}`}>
+      <Card.Content>
+        <Card.Header>
+          {moment(event.date).format('MMM YYYY')}
+        </Card.Header>
+      </Card.Content>
+      <Icon name={point} circular bordered />
+      {event.type === 'role' && <Role role={event as schema.TimelineRoleItem} />}
+      {event.type === 'education' && <Education education={event as schema.TimelineEducationItem} />}
+      {event.type === 'project' && <Project project={event as schema.TimelineProjectItem } />}
+      {event.achievements && event.achievements.map((item, i) => (
+        <Achievement achievement={item} key={i} />
+      ))}
+    </Card>
   );
 };
 
