@@ -33,7 +33,7 @@ export default class DesktopContainer extends Component<DesktopContainerProps> {
           onBottomPassedReverse={this.hideFixedMenu}
         >
           <Segment
-            className="primary"
+            className="primary top"
             inverted
             textAlign="center"
             vertical
@@ -48,7 +48,7 @@ export default class DesktopContainer extends Component<DesktopContainerProps> {
               <Container>
                 <PrimaryMenuItems />
                 <Menu.Item position="right">
-                  <Button as="a" inverted>
+                  <Button as="a" inverted={!fixed} href="https://drive.google.com/open?id=1Y95QFjrXIn0kxNWTwLltlht7v__Z2QyD" target="_blank">
                     Resume
                   </Button>
                 </Menu.Item>

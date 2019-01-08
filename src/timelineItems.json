@@ -5,20 +5,6 @@
     "title": "Amateur Hour",
     "description": "Become an amaterur programmer.",
     "icon": "code",
-    "skills": [
-      {
-        "title": "PHP",
-        "level": 1
-      },
-      {
-        "title": "JavaScript",
-        "level": 1
-      },
-      {
-        "title": "MySQL",
-        "level": 1
-      }
-    ],
     "achievements": [
       {
         "title": "First Programming Language",
@@ -51,24 +37,6 @@
     "company": "CGI",
     "image": "cgi.png",
     "url": "https://cgi.com",
-    "skills": [
-      {
-        "title": "C#",
-        "level": 1
-      },
-      {
-        "title": "Java",
-        "level": 1
-      },
-      {
-        "title": "Oracle",
-        "level": 1
-      },
-      {
-        "title": "MSSQL",
-        "level": 1
-      }
-    ],
     "achievements": [
       {
         "title": "Training Wheels",
@@ -82,20 +50,6 @@
     "title": "Software Developer",
     "description": "Built the first advertising network for facebook app developers.",
     "company": "LE Software",
-    "skills": [
-      {
-        "title": "C#",
-        "level": 2
-      },
-      {
-        "title": "JavaScript",
-        "level": 2
-      },
-      {
-        "title": "MSSQL",
-        "level": 2
-      }
-    ],
     "achievements": [
       {
         "title": "Just Listed",
@@ -116,20 +70,6 @@
     "title": "Senior Software Engineer",
     "company": "Adknowledge",
     "image": "adknowledge.png",
-    "skills": [
-      {
-        "title": "C#",
-        "level": 2
-      },
-      {
-        "title": "JavaScript",
-        "level": 2
-      },
-      {
-        "title": "MSSQL",
-        "level": 2
-      }
-    ],
     "achievements": [
       {
         "title": "Greener Pastures",
@@ -149,24 +89,6 @@
     "title": "Senior Software Developer",
     "company": "Redengine",
     "image": "redengine.png",
-    "skills": [
-      {
-        "title": "C#",
-        "level": 3
-      },
-      {
-        "title": "JavaScript",
-        "level": 3
-      },
-      {
-        "title": "MSSQL",
-        "level": 3
-      },
-      {
-        "title": "Umbraco",
-        "level": 3
-      }
-    ],
     "achievements": [
       {
         "title": "Unicorn Hunter",
@@ -183,25 +105,7 @@
     "type": "role",
     "title": "Senior Software Developer",
     "company": "iomer internet solutions",
-    "image": "iomer.png",
-    "skills": [
-      {
-        "title": "C#",
-        "level": 3
-      },
-      {
-        "title": "JavaScript",
-        "level": 3
-      },
-      {
-        "title": "MSSQL",
-        "level": 3
-      },
-      {
-        "title": "Umbraco",
-        "level": 3
-      }
-    ]
+    "image": "iomer.png"
   },
   {
     "date": "2014-02-01",
@@ -230,20 +134,6 @@
     "title": "Senior Software Architect",
     "company": "Localize",
     "image": "localize.png",
-    "skills": [
-      {
-        "title": "C#",
-        "level": 3
-      },
-      {
-        "title": "TypeScript",
-        "level": 2
-      },
-      {
-        "title": "MSSQL",
-        "level": 3
-      }
-    ],
     "achievements": [
       {
         "title": "Repeat Customer",
@@ -269,20 +159,6 @@
     "company": "Testfire Labs",
     "description": "Lead a team specializing in A.I. and meeting productivity.",
     "image": "testfire.png",
-    "skills": [
-      {
-        "title": "node.js",
-        "level": 3
-      },
-      {
-        "title": "TypeScript",
-        "level": 3
-      },
-      {
-        "title": "MongoDB",
-        "level": 2
-      }
-    ],
     "achievements": [
       {
         "title": "A.I. Overlords",

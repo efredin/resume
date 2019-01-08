@@ -5,6 +5,7 @@ import {
   Icon,
   Image
 } from 'semantic-ui-react';
+import { Link } from 'react-scroll';
 import headshot from './images/headshot.jpg';
 import './Masthead.less';
 
@@ -22,9 +23,9 @@ const Masthead = () => {
         content="Software Developer"
         inverted
       />
-      <a className="down" href="#timeline">
+      <Link className="down" to="timeline" smooth={true}>
         <Icon size="huge" name="chevron down" />
-      </a>
+      </Link>
     </Container>
   );
 };

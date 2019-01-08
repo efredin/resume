@@ -38,7 +38,7 @@ export default class MobileContainer extends Component<MobileContainerProps> {
           visible={sidebarOpened}
         >
           <PrimaryMenuItems />
-          <Menu.Item as="a">Resume</Menu.Item>
+          <Menu.Item as="a" href="https://drive.google.com/open?id=1Y95QFjrXIn0kxNWTwLltlht7v__Z2QyD" target="_blank">Resume</Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -46,6 +46,7 @@ export default class MobileContainer extends Component<MobileContainerProps> {
             inverted
             textAlign="center"
             vertical
+            className="primary top"
           >
             <Container>
               <Menu inverted pointing secondary size="large">
@@ -53,7 +54,7 @@ export default class MobileContainer extends Component<MobileContainerProps> {
                   <Icon name="sidebar" />
                 </Menu.Item>
                 <Menu.Item position="right">
-                  <Button as="a" inverted>
+                  <Button as="a" inverted href="https://drive.google.com/open?id=1Y95QFjrXIn0kxNWTwLltlht7v__Z2QyD" target="_blank">
                     Resume
                   </Button>
                 </Menu.Item>
