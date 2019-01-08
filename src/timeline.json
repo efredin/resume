@@ -163,6 +163,10 @@
       {
         "title": "A.I. Overlords",
         "description": "Create an A.I. and hope it doesn't take over the world."
+      },
+      {
+        "title": "So Micro",
+        "description": "Go all-in on microservice architecture."
       }
     ]
   },
