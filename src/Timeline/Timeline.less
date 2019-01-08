@@ -1,74 +1,150 @@
 @border-color: #d4d4d5;
 
+.clear {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
 .ui.timeline {
   position: relative;
+
+  &:after {
+    .clear();
+  }
 
   &:before {
     position: absolute;
     top: 0;
-    left: calc(50% - 1px);
+    right: 0;
     width: 3px;
     height: 100%;
     content: '';
     background-color: @border-color;
   }
 
-  .point {
-    position: absolute;
-    left: calc(50% - 8px);
-    display: block;
-    width: 6px;
-    height: 6px;
-    margin-top: 1rem;
-    padding: 6px;
-    line-height: 1em;
-    text-align: center;
-    border-radius: 100%;
-    background-color: @border-color;
-    border: 3px solid #fff;
-  }
-
-  .card {
+  .event {
     position: relative;
-    width: 48%;
 
-    &:before {
+    &:after {
+      .clear();
+    }
+
+    > .point {
       position: absolute;
       display: block;
-      content: '';
-      top: 1.5rem;
-      margin-top: 2px;
-      width: 10px;
-      height: 10px;
-      background-color: #d4d4d5;
-      transform: translateX(-50%) translateY(-50%) rotate(45deg);
-      z-index: -1;
+      left: calc(100% - 10.5px);
+      width: 6px;
+      height: 6px;
+      margin-top: 1rem;
+      padding: 6px;
+      line-height: 1em;
+      text-align: center;
+      border-radius: 100%;
+      background-color: @border-color;
+      border: 3px solid #fff;
     }
 
-    &.left {
-      left: 0;
+    > .card {
+      max-width: 95%;
 
       &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 1.5rem;
         right: -10px;
+        margin-top: 2px;
+        width: 10px;
+        height: 10px;
+        background-color: #d4d4d5;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        z-index: -1;
       }
-    }
-    &.right {
-      right: 0;
-      margin-left: auto;
-      margin-right: 0;
-
-      &:before {
-        left: 0;
-      }
-    }
-
-    .feed > .event {
-      > .label {
-        width: 5em;
-      }
+  
       > .content {
-        .summary {
-          margin-top: 0.5em;
+        text-align: left;
+  
+        &:first-child > .header {
+          font-size: 1em;
+          text-align: center;
+        }
+  
+        &.event {
+          position: relative;
+          padding-left: 5em;
+  
+          &:last-child {
+            min-height: 6em;
+          }
+  
+          img {
+            position: absolute;
+            left: 0.5em;
+            width: 5em;
+            width: 4em;
+          }
+        }
+  
+        &.skill {
+          .level {
+            padding-right: 0.5em;
+          }
+        }
+  
+        &.item {
+          > .header {
+            font-size: 1.1em;
+            line-height: 1.1em;
+          }
+        }
+      } 
+    }
+  }
+
+  @media (min-width: 768px) {
+    &:before {
+      left: calc(50% - 1.5px);
+    }
+
+    .event {
+      > .point {
+        margin-top: 2rem;
+        left: calc(50% - 8.5px);
+      }
+
+      &.left {
+        &:after {
+          clear: left;
+        }
+        .point {
+          clear: left;
+        }
+        .card {
+          width: 48%;
+          float: left;
+          clear: left;
+        }
+      }
+
+      &.right {
+        &:after {
+          .clear();
+          clear: right;
+        }
+        .point {
+          clear: right;
+        }
+        .card {
+          width: 48%;
+          float: right;
+          clear: right;
+
+          &:before {
+            left: 0;
+          }
         }
       }
     }

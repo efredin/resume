@@ -1,22 +1,269 @@
 [
   {
+    "date": "2000-01-01",
+    "type": "role",
+    "title": "Amateur Hour",
+    "description": "Become an amaterur programmer.",
+    "skills": [
+      {
+        "title": "PHP",
+        "level": 1
+      },
+      {
+        "title": "JavaScript",
+        "level": 1
+      },
+      {
+        "title": "MySQL",
+        "level": 1
+      }
+    ],
+    "achievements": [
+      {
+        "title": "First Programming Language",
+        "description": "Learn your first programming language."
+      }
+    ]
+  },
+  {
+    "date": "2004-12-20",
+    "type": "education",
+    "title": "Computer Systems Technology",
+    "company": "Northern Alberta Institute of Technology",
+    "image": "nait.png",
+    "achievements": [
+      {
+        "title": "Learn All the Things",
+        "description": "Learn about all the things you don't know and despair."
+      },
+      {
+        "title": "Playing Favorites",
+        "description": "Pick a favorite programming language and defend it for rationalized reasons."
+      }
+    ]
+  },
+  {
     "date": "2005-01-01",
     "type": "role",
     "title": "Systems Analyst",
     "company": "CGI",
-    "description": "This is a test",
-    "image": "cgi.png"
+    "image": "cgi.png",
+    "skills": [
+      {
+        "title": "C#",
+        "level": 1
+      },
+      {
+        "title": "Java",
+        "level": 1
+      },
+      {
+        "title": "Oracle",
+        "level": 1
+      },
+      {
+        "title": "MSSQL",
+        "level": 1
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Training Wheels",
+        "description": "Write some code that occasionally doesn't suck."
+      }
+    ]
   },
   {
-    "date": "2018-06-01",
-    "type": "achievement",
-    "title": "Test Achievement",
-    "description": "This is a test achievement"
+    "date": "2007-01-01",
+    "type": "role",
+    "title": "Software Developer",
+    "company": "LE Software",
+    "skills": [
+      {
+        "title": "C#",
+        "level": 2
+      },
+      {
+        "title": "JavaScript",
+        "level": 2
+      },
+      {
+        "title": "MSSQL",
+        "level": 2
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Just Listed",
+        "description": "Become part of a corporate acquisition."
+      }
+    ]
   },
   {
-    "date": "2018-06-02",
-    "type": "achievement",
-    "title": "Test Achievement",
-    "description": "This is a test achievement"
+    "date": "2007-11-01",
+    "type": "role",
+    "title": "Senior Software Engineer",
+    "company": "Adknowledge",
+    "image": "adknowledge.png",
+    "skills": [
+      {
+        "title": "C#",
+        "level": 2
+      },
+      {
+        "title": "JavaScript",
+        "level": 2
+      },
+      {
+        "title": "MSSQL",
+        "level": 2
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Greener Pastures",
+        "description": "Relocate to another country for work."
+      }
+    ]
+  },
+  {
+    "date": "2011-09-01",
+    "type": "role",
+    "title": "Senior Software Developer",
+    "company": "Redengine",
+    "image": "redengine.png",
+    "skills": [
+      {
+        "title": "C#",
+        "level": 3
+      },
+      {
+        "title": "JavaScript",
+        "level": 3
+      },
+      {
+        "title": "MSSQL",
+        "level": 3
+      },
+      {
+        "title": "Umbraco",
+        "level": 3
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Unicorn Hunter",
+        "description": "Join your first startup."
+      },
+      {
+        "title": "Runaway Train",
+        "description": "Be a final member of a startup when the doors close forever."
+      }
+    ]
+  },
+  {
+    "date": "2013-08-01",
+    "type": "role",
+    "title": "Senior Software Developer",
+    "company": "iomer internet solutions",
+    "image": "iomer.png",
+    "skills": [
+      {
+        "title": "C#",
+        "level": 3
+      },
+      {
+        "title": "JavaScript",
+        "level": 3
+      },
+      {
+        "title": "MSSQL",
+        "level": 3
+      },
+      {
+        "title": "Umbraco",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "date": "2014-02-01",
+    "type": "role",
+    "title": "Senior Software Developer",
+    "company": "Riva CRM Integration",
+    "image": "riva.png",
+    "skills": [
+      {
+        "title": "C#",
+        "level": 3
+      },
+      {
+        "title": "JavaScript",
+        "level": 3
+      },
+      {
+        "title": "MSSQL",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "date": "2014-07-01",
+    "type": "role",
+    "title": "Senior Software Architect",
+    "company": "Localize",
+    "image": "localize.png",
+    "skills": [
+      {
+        "title": "C#",
+        "level": 3
+      },
+      {
+        "title": "TypeScript",
+        "level": 2
+      },
+      {
+        "title": "MSSQL",
+        "level": 3
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Repeat Customer",
+        "description": "Join another startup company with a better understanding of the risks."
+      },
+      {
+        "title": "Do Good",
+        "description": "Join a company on a mission to change the world for the better."
+      }
+    ]
+  }
+  ,
+  {
+    "date": "2017-06-01",
+    "type": "role",
+    "title": "Development Lead",
+    "company": "Testfire Labs",
+    "image": "testfire.png",
+    "skills": [
+      {
+        "title": "node.js",
+        "level": 3
+      },
+      {
+        "title": "TypeScript",
+        "level": 3
+      },
+      {
+        "title": "MongoDB",
+        "level": 2
+      }
+    ],
+    "achievements": [
+      {
+        "title": "A.I. Overlords",
+        "description": "Create an A.I. and hope it doesn't take over the world."
+      }
+    ]
   }
 ]

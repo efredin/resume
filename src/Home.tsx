@@ -3,18 +3,15 @@ import ResponsiveContainer from './Layout/ResponsiveContainer';
 import Masthead from './Masthead';
 import { Segment, Grid } from 'semantic-ui-react';
 import Timeline from './Timeline/Timeline';
-import items from './timelineItems.json';
+import events from './timelineItems.json';
 
 const Home = () => (
   <ResponsiveContainer masthead={<Masthead />}>
     <Segment style={{ padding: '8em 0em' }} vertical>
-      <Grid container verticalAlign="top">
+      <Grid container centered verticalAlign="top">
         <Grid.Row>
-          <Grid.Column width={12} textAlign="center">
-            <Timeline items={items as any} />
-          </Grid.Column>
-          <Grid.Column width={4}>
-            Sidebar here
+          <Grid.Column computer={14} mobile={16} tablet={16} textAlign="center">
+            <Timeline events={events as any} />
           </Grid.Column>
         </Grid.Row>
       </Grid>
