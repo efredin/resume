@@ -31,7 +31,7 @@ const Home = () => (
       <Grid container centered stackable>
         <Grid.Column textAlign="center">
           <a target="_blank" href="https://www.facebook.com/eric.fredin">
-            <Icon size="big" name="facebook" inverted />
+            <Icon size="big" name="facebook" />
           </a>
           <a target="_blank" href="https://www.linkedin.com/in/fredin/">
             <Icon size="big" name="linkedin" />

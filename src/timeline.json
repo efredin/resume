@@ -2,8 +2,8 @@
   {
     "date": "2000-01-01",
     "type": "role",
-    "title": "Amateur Hour",
-    "description": "Become an amaterur programmer.",
+    "title": "Amateur Programmer",
+    "description": "Discover the world of programmming through curiosity, experimentation and grit.",
     "icon": "code",
     "achievements": [
       {
@@ -34,6 +34,7 @@
     "date": "2005-01-01",
     "type": "role",
     "title": "Systems Analyst",
+    "description": "Consultancy specializing in healthcare.",
     "company": "CGI",
     "image": "cgi.png",
     "url": "https://cgi.com",
@@ -69,6 +70,7 @@
     "type": "role",
     "title": "Senior Software Engineer",
     "company": "Adknowledge",
+    "description": "Maintain and improve on the social advertising network acquired from LE Software.",
     "image": "adknowledge.png",
     "achievements": [
       {
@@ -87,6 +89,7 @@
     "date": "2011-09-01",
     "type": "role",
     "title": "Senior Software Developer",
+    "description": "Consultancy specializing in Umbraco CMS websites.",
     "company": "Redengine",
     "image": "redengine.png",
     "achievements": [
@@ -104,6 +107,7 @@
     "date": "2013-08-01",
     "type": "role",
     "title": "Senior Software Developer",
+    "description": "Consultancy specializing in Umbraco CMS projects.",
     "company": "iomer internet solutions",
     "image": "iomer.png"
   },
@@ -112,26 +116,13 @@
     "type": "role",
     "title": "Senior Software Developer",
     "company": "Riva CRM Integration",
-    "image": "riva.png",
-    "skills": [
-      {
-        "title": "C#",
-        "level": 3
-      },
-      {
-        "title": "JavaScript",
-        "level": 3
-      },
-      {
-        "title": "MSSQL",
-        "level": 3
-      }
-    ]
+    "image": "riva.png"
   },
   {
     "date": "2014-07-01",
     "type": "role",
     "title": "Senior Software Architect",
+    "description": "Startup promoting local foods in grocery stores with technology.",
     "company": "Localize",
     "image": "localize.png",
     "achievements": [
