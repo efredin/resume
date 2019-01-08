@@ -2,11 +2,11 @@ import React from 'react';
 import { Card, Icon, List } from 'semantic-ui-react';
 import * as schema from './Schema';
 
-export interface TimelineSkillsProps {
-  skills: schema.TimelineEventSkill[];
+export interface SkillsProps {
+  skills: schema.TimelineSkillItem[];
 }
 
-const TimelineSkills = (props: TimelineSkillsProps) => {
+const Skills = (props: SkillsProps) => {
   const { skills } = props;
   return (
     <Card.Content className="item skill">
@@ -29,4 +29,4 @@ const TimelineSkills = (props: TimelineSkillsProps) => {
   );
 };
 
-export default TimelineSkills;
+export default Skills;

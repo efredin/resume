@@ -1,18 +1,18 @@
 import React from 'react';
-import TimelineEvent from './TimelineEvent';
+import Event from './Event';
 import * as schema from './Schema';
 import './Timeline.less';
 
 export interface TimelineProps {
-  events: schema.TimelineEvent[];
+  events: schema.TimelineEventItem[];
 }
 
 const Timeline = (props: TimelineProps) => {
   const { events } = props;
   return (
     <div className="ui timeline">
-      {events.map((event, i) => (
-        <TimelineEvent key={i} 
+      {events.map((event, e) => (
+        <Event key={`event-${e}`} 
           event={event} 
           position={event.type === 'role' ? 'left' : 'right'} 
         />

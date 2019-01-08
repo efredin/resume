@@ -4,6 +4,7 @@
     "type": "role",
     "title": "Amateur Hour",
     "description": "Become an amaterur programmer.",
+    "icon": "code",
     "skills": [
       {
         "title": "PHP",
@@ -29,7 +30,8 @@
     "date": "2004-12-20",
     "type": "education",
     "title": "Computer Systems Technology",
-    "company": "Northern Alberta Institute of Technology",
+    "institution": "Northern Alberta Institute of Technology",
+    "url": "https://nait.ca",
     "image": "nait.png",
     "achievements": [
       {
@@ -48,6 +50,7 @@
     "title": "Systems Analyst",
     "company": "CGI",
     "image": "cgi.png",
+    "url": "https://cgi.com",
     "skills": [
       {
         "title": "C#",
@@ -77,6 +80,7 @@
     "date": "2007-01-01",
     "type": "role",
     "title": "Software Developer",
+    "description": "Built the first advertising network for facebook app developers.",
     "company": "LE Software",
     "skills": [
       {
@@ -98,6 +102,13 @@
         "description": "Become part of a corporate acquisition."
       }
     ]
+  },
+  {
+    "date": "2007-09-01",
+    "type": "project",
+    "title": "Cubics Social Network Advertising",
+    "description": "Facebook app advertising network.",
+    "company": "LE Software"
   },
   {
     "date": "2007-11-01",
@@ -125,6 +136,12 @@
         "description": "Relocate to another country for work."
       }
     ]
+  },
+  {
+    "date": "2011-01-01",
+    "type": "project",
+    "title": "Comic Mashup",
+    "description": "Social media web comic genereator"
   },
   {
     "date": "2011-09-01",
@@ -237,13 +254,20 @@
         "description": "Join a company on a mission to change the world for the better."
       }
     ]
-  }
-  ,
+  },
+  {
+    "date": "2016-09-01",
+    "type": "project",
+    "title": "Traktion",
+    "image": "traktion.png",
+    "description": "Website to connecting bands and venues."
+  },
   {
     "date": "2017-06-01",
     "type": "role",
     "title": "Development Lead",
     "company": "Testfire Labs",
+    "description": "Lead a team specializing in A.I. and meeting productivity.",
     "image": "testfire.png",
     "skills": [
       {
@@ -265,5 +289,14 @@
         "description": "Create an A.I. and hope it doesn't take over the world."
       }
     ]
+  },
+  {
+    "date": "2018-09-01",
+    "type": "project",
+    "title": "Hendrix.ai",
+    "image": "hendrix.png",
+    "description": "A.I. assistant for generating meeting summaries.",
+    "url": "https://hendrix.ai",
+    "company": "Testfire Labs"
   }
 ]

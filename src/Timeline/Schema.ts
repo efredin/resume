@@ -1,28 +1,47 @@
 import { SemanticICONS } from 'semantic-ui-react';
 
 export interface Timeline {
-  events: TimelineEvent[];
+  events: TimelineItem[];
 }
 
 export interface TimelineItem {
+  type: string;
   title: string;
+  description: string;
 }
 
-export interface TimelineEvent extends TimelineItem {
-  type: 'role' | 'project' | 'education';
+export interface TimelineEventItem extends TimelineItem {
+  achievements?: TimelineAchievementItem[];
+  skills?: TimelineSkillItem[];
+  date: string;
   image?: string;
   icon?: SemanticICONS;
-  date: string;
+}
+
+export interface TimelineRoleItem extends TimelineEventItem {
+  type: 'role';
+  company: string;
+  url?: string;
+}
+
+export interface TimelineEducationItem extends TimelineEventItem {
+  type: 'education';
+  institution: string;
+  url?: string;
+}
+
+export interface TimelineProjectItem extends TimelineEventItem {
+  type: 'project';
   company?: string;
-  description: string;
-  achievements?: TimelineEventAchievement[];
-  skills?: TimelineEventSkill[];
+  url?: string;
 }
 
-export interface TimelineEventAchievement extends TimelineItem {
+export interface TimelineAchievementItem extends TimelineItem {
+  type: 'achievement';
   description: string;
 }
 
-export interface TimelineEventSkill extends TimelineItem {
+export interface TimelineSkillItem extends TimelineItem {
+  type: 'skill';
   level: number;
 }

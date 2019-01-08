@@ -2,11 +2,11 @@ import React from 'react';
 import { Card, Icon } from 'semantic-ui-react';
 import * as schema from './Schema';
 
-export interface TimelineAchievementProps {
-  achievement: schema.TimelineEventAchievement;
+export interface AchievementProps {
+  achievement: schema.TimelineAchievementItem;
 }
 
-const TimelineAchievement = (props: TimelineAchievementProps) => {
+const Achievement = (props: AchievementProps) => {
   const { achievement } = props;
   return (
     <Card.Content className="item">
@@ -21,4 +21,4 @@ const TimelineAchievement = (props: TimelineAchievementProps) => {
   );
 };
 
-export default TimelineAchievement;
+export default Achievement;
