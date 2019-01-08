@@ -16,16 +16,20 @@ const Event = (props: TimelineEventProps) => {
   const { event, position } = props;
 
   let point;
+  let color;
   switch (event.type) {
     case 'role':
     default:
       point = 'briefcase';
+      color = 'blue';
       break;
     case 'education':
       point = 'graduation';
+      color = 'orange';
       break;
     case 'project':
       point = 'code';
+      color = 'green';
       break;
   }
 
@@ -36,7 +40,7 @@ const Event = (props: TimelineEventProps) => {
           {moment(event.date).format('MMM YYYY')}
         </Card.Header>
       </Card.Content>
-      <Icon name={point} circular bordered />
+      <Icon name={point} circular bordered color={color} />
       {event.type === 'role' && <Role role={event as schema.TimelineRoleItem} />}
       {event.type === 'education' && <Education education={event as schema.TimelineEducationItem} />}
       {event.type === 'project' && <Project project={event as schema.TimelineProjectItem } />}

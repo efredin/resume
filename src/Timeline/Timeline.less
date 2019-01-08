@@ -27,12 +27,13 @@
 
   .event.card {
     position: relative;
-    max-width: 95%;
+    max-width: calc(100% - 2rem);
     margin: 0 0 2rem;
 
     > .icon {
       position: absolute;
       top: 0.5rem;
+      left: calc(100% + 1rem);
       margin: 0;
       background: #fff;
     }
@@ -102,11 +103,7 @@
       &.left {
         width: calc(50% - 2rem);
         float: left;
-        clear: left;
-
-        > .icon {
-          left: calc(100% + 1rem);
-        }
+        clear: both;
 
         &:after {
           clear: left;
@@ -123,6 +120,7 @@
         clear: right;
 
         > .icon {
+          left: auto;
           right: calc(100% + 1rem);
         }
 
